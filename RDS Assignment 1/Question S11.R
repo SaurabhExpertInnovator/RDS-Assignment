@@ -1,0 +1,23 @@
+#6. Create and store a vector that contains the following, in this order:
+#i. A sequence of length 5 from 3 to 6 (inclusive)
+#ii. A twofold repetition of the vector c(2,-5.1,-33)
+#iii. The value 7/42 + 2
+a<-seq(from=3, to =6, length.out=5)
+a
+b<-rep(c(2,-5.1,-33),times=2)
+b
+cx<-7/42+2
+cx
+new_v<-c(a,b,cx)
+new_v
+
+#10. Overwrite (6.) with the same values sorted from smallest to largest.
+new_v<-sort(new_v)
+new_v
+
+#11. Use the colon operator as an index vector to reverse the order of (10.), and confirm this is
+#identical to using sort on (10.) with decreasing=TRUE.
+vec<-1:10
+reversed_using_colon<-vec[length(vec):1]
+reversed_using_sort<-sort(vec, decreasing=TRUE)
+identical(reversed_using_sort,reversed_using_colon)
